@@ -26,7 +26,7 @@ public class St10036997 {
                 JOptionPane.showMessageDialog(null, "Welcome " +name + " " +surname + " it is great to see you again. ");
                 JOptionPane.showMessageDialog(null, "Welcome to EasyKanban");
                 while(!quitFlag){
-                Integer choice = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter 1 or 2 or 3"));
+                Integer choice = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter 1 to add a task \n2 to show report(Work in progress)\n3 to quit the program"));
                 switch (choice) {
                     case 1: Task.taskArrays();break;
                     case 2: JOptionPane.showMessageDialog(null, "This feature is coming soon");break;
