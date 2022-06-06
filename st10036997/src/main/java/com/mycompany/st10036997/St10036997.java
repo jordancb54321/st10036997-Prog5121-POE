@@ -23,7 +23,17 @@ public class St10036997 {
             JOptionPane.showMessageDialog(null, "Successful registration");
             if (Login.loginUser(username, password)){
                 JOptionPane.showMessageDialog(null, "Welcome " +name + " " +surname + " it is great to see you again. ");
-            }
+                JOptionPane.showMessageDialog(null, "Welcome to EasyKanban");
+                Integer choice = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter 1 or 2 or 3"));
+                switch (choice) {
+                    case 1: System.out.println("testing 1");break;
+                    case 2: System.out.println("testing 2");break;
+                    case 3: System.out.println("testing 3");break;
+                    default: System.out.println("incorrect number");break;
+                        
+                }
+                }
+            
 
         }
         else {
