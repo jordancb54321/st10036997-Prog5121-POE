@@ -2,8 +2,11 @@ package com.mycompany.st10036997;
 
 import javax.swing.JOptionPane;
 
+import java.util.stream.*;
+
 public class Task {
     public static void taskArrays() {
+        int hours=0;
         String taskDescriptionCheck;
         int taskNumber = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of tasks"));
         int[] taskNumArray = new int[taskNumber];
@@ -19,10 +22,12 @@ public class Task {
 
             do{
                 taskDescriptionCheck = JOptionPane.showInputDialog(null, "Enter a task description that is less than 50 characters");
-            }while(!checkTaskDescription(taskDescriptionCheck)); 
+            }while(!checkTaskDescription(taskDescriptionCheck));
+            taskDescription[y] = taskDescriptionCheck;
             taskTime[y] = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the time in hours to complete the task"));
             taskStatus[y] = JOptionPane.showInputDialog(null, "Task status: \nEnter \"To Do\"\nEnter \"Doing\"\nEnter \"Done\"");
             taskDeveloper[y] = JOptionPane.showInputDialog(null, "Enter the task name");
+            printTaskDetails(taskNumArray[y], taskName[y], taskDescription[y], taskTime[y], taskStatus[y], taskDeveloper[y]);
         }
 
 
@@ -38,6 +43,17 @@ public class Task {
             return true;
         }
         
+    }
+    public static String TaskId(String taskName, Integer taskNumber, String taskDeveloper) {
+        return taskName.substring(0,2) + ":" + taskNumber + ":" + taskDeveloper.substring(taskDeveloper.length() - 3);
+        
+    }
+    public static String printTaskDetails(int number, String name, String taskDescription, int taskTime, String taskStatus, String taskDeveloper) {
+        return "Task number is:" + number + "\nTask name is:" + name + "\nTask description is:" + taskDescription + "\nTask time is:" + taskTime + "\nTask status is:" + taskStatus + "\nTask developer is:" + taskDeveloper;
+    }
+    public static int returnTotalHours(int hours[]) {
+        int totalHours = IntStream.of(hours).sum();
+        return totalHours;
     }
 
         
