@@ -2,6 +2,8 @@ package com.mycompany.st10036997;
 
 import javax.swing.JOptionPane;
 
+import scala.collection.mutable.StringBuilder;
+
 import java.util.stream.*;
 
 public class Task {
@@ -10,7 +12,7 @@ public class Task {
         String taskDescriptionCheck;
         int taskNumber = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of tasks"));
         int[] taskNumArray = new int[taskNumber];
-        String[] taskName = new String[taskNumber];
+        StringBuilder[] taskName = new String[taskNumber];
         String[] taskDescription = new String[taskNumber];
         int[] taskTime = new int[taskNumber];
         String[] taskStatus = new String[taskNumber];
