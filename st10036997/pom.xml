@@ -10,4 +10,18 @@
         <maven.compiler.target>18</maven.compiler.target>
         <exec.mainClass>com.mycompany.st10036997.St10036997</exec.mainClass>
     </properties>
+
+  <dependencies>
+    <dependency>
+<<<<<<< Updated upstream
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>2.13.0</version>
+=======
+      <groupId>com.dukescript.nbjavac</groupId>
+      <artifactId>nb-javac</artifactId>
+      <version>jdk-18.0.1+10</version>
+>>>>>>> Stashed changes
+    </dependency>
+  </dependencies>
 </project>
